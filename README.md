@@ -6,7 +6,7 @@
 
 The application was created to drastically reduce the time required to produce professional subtitles for video content. It allows users to upload a video, automatically generate an audio transcript, translate it into one of many supported languages, manually edit the text in an interactive editor, and finally download either the `.srt` file or the final video with hardcoded subtitles.
 
-**💡 View the live application: [https://subtitle-generator-app-o7rkxymdduw2aydy3q6p4e.streamlit.app/]**
+**💡 View the live application: [https://ai-video-subtitle-generator-cjdtjdjrbdusghdisffsnv.streamlit.app/]**
 
 ---
 
