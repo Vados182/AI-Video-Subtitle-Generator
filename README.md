@@ -1,35 +1,35 @@
 # 🎬 AI Video Subtitle Generator
 
-> Aplikacja webowa do automatycznego generowania, edycji, tłumaczenia i wtapiania napisów do filmów, oparta o modele OpenAI (Whisper & GPT-4).
+> A web application for automatic generation, editing, translation, and hardcoding of video subtitles, powered by OpenAI models (Whisper & GPT-4).
 
-## 🚀 O Projekcie
+## 🚀 About the Project
 
-Aplikacja została stworzona, aby drastycznie skrócić czas potrzebny na tworzenie profesjonalnych napisów do materiałów wideo. Pozwala użytkownikom wgrać film, automatycznie wygenerować transkrypcję audio, przetłumaczyć ją na jeden z wielu obsługiwanych języków, ręcznie edytować tekst w interaktywnym edytorze i ostatecznie pobrać sam plik `.srt` lub gotowy film z wtopionymi ("hardcoded") napisami.
+The application was created to drastically reduce the time required to produce professional subtitles for video content. It allows users to upload a video, automatically generate an audio transcript, translate it into one of many supported languages, manually edit the text in an interactive editor, and finally download either the `.srt` file or the final video with hardcoded subtitles.
 
-**💡 Zobacz działającą aplikację: [https://subtitle-generator-app-o7rkxymdduw2aydy3q6p4e.streamlit.app/]**
+**💡 View the live application: [https://subtitle-generator-app-o7rkxymdduw2aydy3q6p4e.streamlit.app/]**
 
 ---
 
-## 🛠️ Użyte Technologie & Architektura
+## 🛠️ Technologies & Architecture
 
-Projekt został zaprojektowany z dbałością o separację logiki od interfejsu (Modular Architecture), co ułatwia testowanie i rozwój.
+The project is designed with a strong focus on separating business logic from the user interface (Modular Architecture), making testing and future development easier.
 
--   **Python (3.11)** - Główne środowisko programistyczne.
--   **Streamlit** - Framework do szybkiego tworzenia interfejsów webowych.
--   **OpenAI API** - Integracja z modelami Whisper (v3) i GPT-4.
--   **Pydub** - Biblioteka do manipulacji plikami audio.
--   **FFmpeg** - Zewnętrzne narzędzie systemowe do zaawansowanej konwersji i wtapiania napisów.
--   **Git** - System kontroli wersji.
+-   **Python (3.11)** - Main development environment.
+-   **Streamlit** - Framework for rapid web interface creation.
+-   **OpenAI API** - Integration with Whisper (v3) and GPT-4 models.
+-   **Pydub** - Library for audio file manipulation.
+-   **FFmpeg** - External system tool for advanced conversion and hardcoding subtitles.
+-   **Git** - Version control system.
 
-### Struktura Projektu (Separation of Concerns):
+### Project Structure (Separation of Concerns):
 
-W VS Code:
+In VS Code:
 ```text
-├── .streamlit/config.toml  # Konfiguracja limitu 1GB w interfejsie Streamlit.
-├── app.py                  # Główny plik, widoki i kontroler stanu aplikacji (Streamlit).
-├── audio_processor.py      # Logika obróbki audio, walidacji i operacji systemowych (FFmpeg).
-├── openai_service.py       # Klasa obsługująca komunikację z API OpenAI (Whisper & GPT).
-├── requirements.txt        # Lista zależności Pythona.
-├── .gitignore              # Lista plików ignorowanych przez Git (np. śmieci timery, __pycache__).
-├── movie.jpg               # Obraz tła interfejsu.
-└── translate.png           # Obraz paska bocznego.
+├── .streamlit/config.toml  # Configuration for the 1GB limit in the Streamlit interface.
+├── app.py                  # Main file, views, and application state controller (Streamlit).
+├── audio_processor.py      # Audio processing logic, validation, and system operations (FFmpeg).
+├── openai_service.py       # Service class handling communication with the OpenAI API (Whisper & GPT).
+├── requirements.txt        # List of Python dependencies.
+├── .gitignore              # List of files ignored by Git (e.g., caches, __pycache__).
+├── movie.jpg               # Interface background image.
+└── translate.png           # Sidebar image.
